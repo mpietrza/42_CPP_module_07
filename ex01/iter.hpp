@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 18:27:09 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/07/14 18:49:19 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:07:13 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * @param func The function to apply to each element.
  * @tparam T The type of the elements in the array.
  * @tparam F The type of the function to apply.
- * 
+ * @returns void
  */
 template <typename T, typename F>
 void iter(T* arr, size_t len, F func) {
