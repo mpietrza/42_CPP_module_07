@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 17:44:13 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/07/24 18:07:24 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/07/28 17:07:58 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,13 @@ class Array
 		Array &operator=(const Array &other);
 		~Array();
 		
-		T& operator[](unsigned int index); //maybe const? but it can be risky
-		
-		//exception
-		class InvalidIndexException : public std::exception {
-			public:
-				virtual const char *what() const throw();
-		};
+		T &operator[](unsigned int index); //non-const version for non-const objects
+		const T &operator[](unsigned int index) const; //const version for const objects
 
 		//getter
-		unsigned int getSize() const;
+		unsigned int size() const;
 
 };
 
+#include "Array.tpp"
 #endif
